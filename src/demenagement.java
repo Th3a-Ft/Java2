@@ -1,9 +1,18 @@
+import java.util.Scanner;
+
 public class demenagement {
     public static void main(String[] args) {
-        int boxToMove=34;
-        int truckCapacity=9;
+        int boxToMove;
+        int truckCapacity;
         int boxMoving;
 
+        Scanner clavier=new Scanner(System.in);
+        System.out.println("Saisissez le nombre total de cartons : ");
+        boxToMove=clavier.nextInt();
+        System.out.println("Saisissez la capacité du camion : ");
+        truckCapacity=clavier.nextInt();
+
+        System.out.println("Récap : nbre de cartons ("+boxToMove+") / Capacité du camion : ("+truckCapacity+")");
         while(boxToMove>0){
             if(boxToMove>=truckCapacity){
                 boxMoving=truckCapacity;
