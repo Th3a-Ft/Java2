@@ -13,6 +13,9 @@ public class MovingOut {
         truckCapacity=keyboard.nextInt();
 
         System.out.println("Recap : Number of boxes to move ("+boxToMove+") / Truck's capacity : ("+truckCapacity+")");
+        if(boxToMove<0 || truckCapacity<0){
+            System.out.println("Both number of boxes to move & truck's capacity have to be positive");
+        } else {
         while(boxToMove>0){
             if(boxToMove>=truckCapacity){
                 boxMoving=truckCapacity;
@@ -25,4 +28,5 @@ public class MovingOut {
             }
         }
     }
+}
 }
